@@ -17,5 +17,21 @@ console.log(prices);
 
 
 // 2. ForEach not return anything
+let vattedArray = [];
+products.forEach((product,i) => {
+    let myPrice = product.price;
+    let getFivePercentVat = (myPrice * 5) / 100;
+    let myPriceWithVat = myPrice + getFivePercentVat;
+    vattedArray.push(myPriceWithVat);
+    console.log(myPrice);
+});
+
+console.log(vattedArray);
+
 // 3. Filter  if condition fulfiled then return new array
+const blackProduct = products.filter(product => product.color === 'black');
+console.log(blackProduct);
+
 // 4. Find if condition fulfiled then return first element
+const getterThen40 = products.find(product => product.price > 20000)
+console.log(getterThen40);
