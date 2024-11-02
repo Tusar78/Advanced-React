@@ -1,0 +1,21 @@
+#clearValue, #setValue, #getValue {
+    border: none;
+    border-radius: 8px;
+    padding: 6px 18px;
+    margin-bottom: 8px;
+}
+
+#setValue {
+    color: green;
+    background-color: #d6ffd6;
+}
+
+#getValue {
+    color: blue;
+    background-color: #d2d2ff;
+}
+
+#clearValue {
+    color: red;
+    background-color: #ffc8c8;
+}
