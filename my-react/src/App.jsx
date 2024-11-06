@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -6,8 +7,31 @@ function App() {
     age: 24,
     job: 'Web Developer'
   }
+
+
+  const [count, setCount] = useState(0);
+  const [myCount, setMyCount] = useState(0);
+  
+  const handleClick = () => {
+    setCount(count => count + 1);
+  }
+
+  const handleClickT = () => {
+    setMyCount(myCount => myCount + 1)
+  }
+
+  useEffect(() => {
+    console.log('Effect');
+  },[count])
   return (
     <>
+      {
+        console.log('Render')        
+      }
+      <p>i am count <span>{count}</span> </p>
+      <p>i am my count <span>{myCount}</span> </p>
+      <button onClick={handleClick}>count + </button>
+      <button onClick={handleClickT}>mycount +</button>
       <Card personInfo={personInfo}></Card>
     </>
   );
