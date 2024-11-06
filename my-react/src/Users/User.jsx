@@ -1,14 +1,15 @@
 import React from 'react'
 import './User.css'
 
-const User = ({user, load}) => {
-    console.log(load);
+const User = ({user, load, error}) => {
+    // console.log(load);
+    console.log(error);
     
     
   return (
     <div className='user-list'>
         {
-            load && <p>Data is Loading</p>
+            error && <p>Data is error</p>
         }
       {user && user.map((usr) => (
         <div key={usr.id} className='user-item'>
