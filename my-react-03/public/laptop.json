@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "brand": "Dell",
+    "model": "XPS 13",
+    "processor": "Intel Core i7",
+    "RAM": "16GB",
+    "storage": "512GB SSD",
+    "price": 1200,
+    "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-laptop.jpg"
+  },
+  {
+    "id": 2,
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "processor": "Apple M1",
+    "RAM": "8GB",
+    "storage": "256GB SSD",
+    "price": 999,
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mb-air-select-202206?wid=640&hei=595&fmt=jpeg&qlt=90&.v=1653493200207"
+  },
+  {
+    "id": 3,
+    "brand": "HP",
+    "model": "Spectre x360",
+    "processor": "Intel Core i5",
+    "RAM": "8GB",
+    "storage": "256GB SSD",
+    "price": 1100,
+    "image": "https://www.hp.com/content/dam/sites/worldwide/personal/spectre_x360_16.jpg"
+  },
+  {
+    "id": 4,
+    "brand": "Lenovo",
+    "model": "ThinkPad X1 Carbon",
+    "processor": "Intel Core i7",
+    "RAM": "16GB",
+    "storage": "1TB SSD",
+    "price": 1400,
+    "image": "https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen10-hero.png?context=bWFzdGVyfHJvb3R8NDk1NzF8aW1hZ2UvcG5nfGgyYS9oYmQvMTQzNjE5NzM4ODk5NzQucG5nfDc2NDA4OWFhNDk4YjM0NzljZDU0MmU5MGE3MWFlODUyMmU5NmNhNGQ5MDE5MmMxNjc1Yjc0ZmU1MjI5YzFiYTI"
+  },
+  {
+    "id": 5,
+    "brand": "Asus",
+    "model": "ROG Zephyrus G14",
+    "processor": "AMD Ryzen 9",
+    "RAM": "16GB",
+    "storage": "1TB SSD",
+    "price": 1500,
+    "image": "https://dlcdnwebimgs.asus.com/gain/7782241B-F6D4-46C6-97D1-2C7E89A32F54"
+  },
+  {
+    "id": 6,
+    "brand": "Acer",
+    "model": "Swift 3",
+    "processor": "Intel Core i5",
+    "RAM": "8GB",
+    "storage": "512GB SSD",
+    "price": 700,
+    "image": "https://images.acer.com/is/image/acer/Acer-Swift-3-SF313-53-Frost-White-02?wid=1920&hei=1080"
+  },
+  {
+    "id": 7,
+    "brand": "Microsoft",
+    "model": "Surface Laptop 4",
+    "processor": "AMD Ryzen 5",
+    "RAM": "16GB",
+    "storage": "512GB SSD",
+    "price": 1300,
+    "image": "https://compass-ssl.surface.com/assets/81/1b/811bf8a0-f527-4bdb-982f-fbf20b9a5aa3.jpg"
+  }
+]
