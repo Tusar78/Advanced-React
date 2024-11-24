@@ -1,10 +1,11 @@
 import React from 'react'
+import Advice from './Components/Advice/Advice'
 
 const App = () => {
   return (
-    <div>
-      hello World
-    </div>
+    <>
+      <Advice />
+    </>
   )
 }
 
