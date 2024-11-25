@@ -24,7 +24,16 @@ const Products = () => {
     console.log("called the useEffect", products.length);
     if (products.length > 0) {
       const storedCart = getStoredCart();
-      console.log(storedCart);
+      console.log(storedCart, products);
+
+      const saveCart = [];
+      for (const id of storedCart) {
+        const cart = products.find((product) => product.id === id);
+        if (cart) {
+          saveCart.push(cart);
+        }
+      }
+      setCart(saveCart);
     }
   }, [products]);
 
