@@ -17,3 +17,5 @@ const addToLS = id => {
     cart.push(id);
     saveCartToLS(cart)
 }
+
+export {getStoredCart, saveCartToLS, addToLS}

@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import "./Products.css";
+import { addToLS, getStoredCart } from "../../Utils/localstorage";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  const handleCart = (id) => {
-    const newCart = [...cart, id];
+  const handleCart = (product) => {
+    const newCart = [...cart, product];
     setCart(newCart);
+    addToLS(product.id);
   };
 
   useEffect(() => {
@@ -16,6 +18,15 @@ const Products = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
+  // Load cart from local storage
+  useEffect(() => {
+    console.log("called the useEffect", products.length);
+    if (products.length > 0) {
+      const storedCart = getStoredCart();
+      console.log(storedCart);
+    }
+  }, [products]);
 
   return (
     <>
