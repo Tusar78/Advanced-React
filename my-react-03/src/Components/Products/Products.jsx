@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import "./Products.css";
 import { addToLS, getStoredCart } from "../../Utils/localstorage";
+import Cart from "../Cart/Cart";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -45,9 +46,7 @@ const Products = () => {
             <h2 className="products__title">
               My types of product available Here
             </h2>
-            <p>
-              Product Added: <span>{cart.length}</span>
-            </p>
+            <Cart cart={cart} />
           </div>
           <div className="products__list">
             {products.map((product) => (
