@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cart.css";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleDelete }) => {
   console.log(cart);
 
   if (cart.length) {
@@ -17,7 +17,7 @@ const Cart = ({ cart }) => {
                   </div>
                   <span className="cart__price"> Price: {crt.price}</span>
                 </div>
-                <button className="cart__remove">X</button>
+                <button className="cart__remove" onClick={() => handleDelete(crt.id)}>X</button>
               </div>
             ))}
           </div>
