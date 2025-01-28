@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const App = () => {
+  const [count, setCount] = useState(0);
 
-  const hanlder = data => {
-    alert(data + 5)
-  }
+  const counter = (data) => {
+    data ? setCount((count) => count + 1) : setCount((count) => count - 1);
+  };
   return (
     <div>
-      <button onClick={()=> hanlder(10)}>Click</button>
+      <p>{count}</p>
+      <button onClick={() => counter(true)}>Increment</button>
+      <button onClick={() => counter(false)}>Decrement</button>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
