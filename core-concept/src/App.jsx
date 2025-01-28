@@ -1,28 +1,27 @@
 import "./App.css";
 
 const App = () => {
-  const isLoggedIn = true;
+  const usersInfo = [
+    {id: 1, name: 'Tusar', age: 25},
+    {id: 2, name: 'Aopo', age: 23},
+    {id: 3, name: 'Salman', age: 23},
+    {id: 4, name: 'Jannat', age: 22},
+  ]
   return (
-    <>
-      <h2>Hello World</h2>
-      {/* <Greeting isLoggedIn={isLoggedIn} /> */}
-      <Notification newMessage={true} />
-    </>
+    <div>
+      {usersInfo.map(user => <User key={user.id} user={user} />)}
+    </div>
   );
 };
 
-// If Else
-// const Greeting = ({isLoggedIn}) => {
-//   if (isLoggedIn === true) {
-//     return <p>Welcome</p>
-//   } else {
-//     return <p>Please log in</p>
-//   }
-// }
-
-// Conditional Rendering using && Operator
-const Notification = ({ newMessage }) => {
-  return newMessage && alert("You have a new message!");
-};
+const User = ({user: {name, age}}) => {
+  
+  return (
+    <div style={{ border: '1px solid #ddd', padding: '10px', margin: '10px 0' }}>
+      <p><strong>Name:</strong> {name}</p>
+      <p><strong>Age:</strong> {age}</p>
+    </div>
+  )
+}
 
 export default App;
