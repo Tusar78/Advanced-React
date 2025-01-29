@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
   const [count, setCount] = useState(0);
+  useEffect(()=>{
+    setCount(10)
+  }, [])
 
   const counter = (data) => {
     data ? setCount((count) => count + 1) : setCount((count) => count - 1);
