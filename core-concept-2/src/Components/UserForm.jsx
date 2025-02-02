@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const UserForm = () => {
+const UserForm = ({ theme }) => {
   // const [name, setName] = useState("");
   // const [email, setEmail] = useState("");
   // const [subject, setSubject] = useState("");
   // const [date, setDate] = useState("");
   // const [color, setColor] = useState("");
   // const [description, setDescription] = useState("");
-  
+
   // const handleForm = (e) => {
   //   e.preventDefault();
 
@@ -18,6 +18,8 @@ const UserForm = () => {
   //   console.log(user);
   // };
 
+  console.log(theme.color);
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -27,14 +29,13 @@ const UserForm = () => {
     description: "",
   });
 
-
   const updateUser = (e) => {
     e.preventDefault();
 
     setUser({
       ...user,
-      [e.target.name] : e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
 
     console.log(
       `Name: ${user.name}, Email: ${user.email}, subject: ${user.subject}, date: ${user.color}, Description: ${user.description}`
@@ -42,7 +43,7 @@ const UserForm = () => {
   };
 
   return (
-    <div className="mt-6 w-full max-w-4xl mx-auto px-8 border border-gray-300 rounded-xl p-7 flex gap-6">
+    <div className="mt-6 w-full max-w-4xl mx-auto px-8 border rounded-xl p-7 flex gap-6 bg-white">
       <form className="w-full" onSubmit={updateUser}>
         <div className="flex items-center gap-4 w-full">
           <div>
@@ -122,11 +123,6 @@ const UserForm = () => {
         <p>Date: {user.date}</p>
         <p>Favorite Color: {user.color}</p>
         <p>Description: {user.description}</p>
-
-        <input
-          type="text"
-          className="border border-gray-300 p-2 rounded-[5px] outline outline-pink-300"
-        />
       </div>
     </div>
   );
