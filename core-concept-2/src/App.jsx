@@ -1,9 +1,9 @@
-import UserForm from "./Components/UserForm";
+import Main from "./Components/Main";
 
 const App = () => {
   return (
     <div>
-        <UserForm />
+      <Main />
     </div>
   );
 };
