@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 
 const PracticeR = () => {
-  const [count, setCount] = useState(0);
+  const [users, setUser] = useState([]);
 
   useEffect(() => {
-    console.log(`Count changed ${count}`);
-    
-  }, [count])
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, []);
 
   return (
     <div>
-      <p>Hello World {count}</p>
-      <button className="border rounded border-green-300 bg-green-100 text-gray-600 px-8 py-2" onClick={() => setCount(prev => prev + 1)}>Click</button>
+      <p className="text-2xl border-b mb-2">User List {users.length}</p>
+      <ul className="border p-2 space-y-1.5">
+        {
+          users.map(user => <li key={user.id}>{user.name}</li>)
+        }
+      </ul>
     </div>
-  )
+  );
 };
 
 export default PracticeR;
