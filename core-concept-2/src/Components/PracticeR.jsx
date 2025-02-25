@@ -11,7 +11,7 @@ const PracticeR = () => {
 
   return (
     <div>
-      <p className="text-2xl border-b mb-2">User List {users.length}</p>
+      <p className="text-2xl border-b mb-2">User List </p>
       <ul className="border p-2 space-y-1.5">
         {
           users.map(user => <li key={user.id}>{user.name}</li>)
