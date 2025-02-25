@@ -83,7 +83,6 @@ const ShoppingCartWrap = () => {
   console.log(cart.items);
 
   const handleCart = (product) => {
-    console.log(product.name);
 
     setCart((prevCart) => ({
       ...prevCart,
