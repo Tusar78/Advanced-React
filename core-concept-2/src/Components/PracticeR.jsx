@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 const PracticeR = () => {
-  const [seconds, setSeconds] = useState(0);
-  
-  
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setSeconds(second => second + 1);
-  //   }, 1000)
+  const [count, setCount] = useState(0);
 
-  //   return () => clearInterval(interval)
-  // }, [])
+  useEffect(() => {
+    console.log(`Count changed ${count}`);
+    
+  }, [count])
 
-  return <p>{seconds}</p>
+  return (
+    <div>
+      <p>Hello World {count}</p>
+      <button className="border rounded border-green-300 bg-green-100 text-gray-600 px-8 py-2" onClick={() => setCount(prev => prev + 1)}>Click</button>
+    </div>
+  )
 };
 
 export default PracticeR;
