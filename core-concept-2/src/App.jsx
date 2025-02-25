@@ -1,13 +1,9 @@
-import CheckboxHandler from "./Components/CheckboxHandler";
-import Main from "./Components/Main";
-import ShoppingCart from "./Components/ShoppingCart";
+import PracticeR from "./Components/PracticeR";
 
 const App = () => {
   return (
-    <div>
-      {/* <Main /> */}
-      {/* <ShoppingCart /> */}
-      <CheckboxHandler />
+    <div className="grid grid-cols-2 gap-2 m-4">
+      <PracticeR />
     </div>
   );
 };
