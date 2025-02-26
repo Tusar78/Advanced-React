@@ -7,16 +7,12 @@ const ExampleOne = () => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
+      .then(err => console.log('Error fetching data', err))
   }, []);
-
-  console.log(posts);
   
 
   return (
     <div>
-      {
-        console.log(posts)        
-      }
       {
         posts.slice(0, 5).map(post => {
           return <p key={post.id}>{post.title}</p>
