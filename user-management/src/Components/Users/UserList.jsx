@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import User from "./User";
 
 const UserList = () => {
@@ -27,11 +27,21 @@ const UserList = () => {
 
   const handleAge = (age) => {
     let newData;
-    if (age <= 10) {
+    if (age >= "30+") {
+      newData = users.filter((user) => user.registered.age >= 30);
+    } else if (age >= "20+") {
+      newData = users.filter((user) => user.registered.age >= 20);
+    } else if (age >= "10+") {
+      newData = users.filter(
+        (user) => user.registered.age <= 20 && user.registered.age >= 10
+      );
+    } else if (age >= "10") {
       newData = users.filter((user) => user.registered.age <= 10);
+    } else {
+      newData = users.filter((user) => user.registered.age > 0);
     }
-    console.log(newData);
     setfilteredAge(newData);
+    console.log(age);
   };
 
   console.log(filteredData);
@@ -54,7 +64,7 @@ const UserList = () => {
           name=""
           id=""
         >
-          <option>Select</option>
+          <option value="all">Select</option>
           <option value="10">Zero To 10</option>
           <option value="10+">Bigger Than 10</option>
           <option value="20+">Bigger Than 20</option>
