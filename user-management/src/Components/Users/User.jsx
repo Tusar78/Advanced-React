@@ -1,10 +1,12 @@
 import React from 'react'
 
-const User = () => {
+const User = ({user}) => {
+  
   return (
-    <div>
-      hello
-    </div>
+    <div className='border rounded px-2'>
+      <p>name: {user.name.first}</p>
+      <p>age: {user.registered.age}</p>
+    </div> 
   )
 }
 
